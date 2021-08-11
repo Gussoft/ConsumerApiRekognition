@@ -13,10 +13,13 @@ public class BigSignerClient {
         String servir = "http://digitalsignatureclientside-corretto.us-east-1.elasticbeanstalk.com/api/getstatus";
         String servor = "http://digitalsignatureclientside-corretto.us-east-1.elasticbeanstalk.com/api/getsigneddocument";
         File Archivo = new File("C:\\Users\\LENOVO\\Desktop\\demoS.pdf");
+            //Enviar pdf a firmar
         //String response = bs.setFiletoSing(Archivo, Server);
         //System.out.println(response);
+            //Verificar el estado de la firma
         //String getStatus = bs.getStatus2(servir);
         //System.out.println(getStatus);
+            //Descargar el archivo firmado
         bs.getDocumentSing(servor);
     }
 
@@ -146,7 +149,7 @@ public class BigSignerClient {
         while ((bytesRead = inputStream.read(buffer)) != -1) {
             outputStream.write(buffer, 0, bytesRead);
         }
-        
+
         outputStream.close();
         inputStream.close();
 
